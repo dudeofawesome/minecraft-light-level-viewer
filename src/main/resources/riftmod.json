@@ -1,0 +1,10 @@
+{
+  "id": "light-level-viewer",
+  "name": "Light Level Viewer",
+  "authors": [
+    "Louis Orleans"
+  ],
+  "listeners": [
+    "io.orleans.light_level_viewer.RiftHook"
+  ]
+}
