@@ -28,6 +28,8 @@ repositories {
 
 dependencies {
   implementation 'com.github.Chocohead:Rift:jitpack-SNAPSHOT:dev'
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.2'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.2'
 }
 
 minecraft {
@@ -35,4 +37,11 @@ minecraft {
   mappings = 'snapshot_20181130'
   runDir = 'run'
   tweakClass = 'org.dimdev.riftloader.launch.RiftLoaderClientTweaker'
+}
+
+test {
+  useJUnitPlatform()
+  testLogging {
+		events "passed", "skipped", "failed"
+	}
 }
